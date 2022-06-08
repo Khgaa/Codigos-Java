@@ -25,7 +25,11 @@ public class Principal {
 		
 		System.out.println(lista.toString());
 		
-		lista.adicionaPosicao(3, "Marcos");
+		lista.adicionaPosicao(8, "Marcos");
+		
+		System.out.println(lista.toString());
+		
+		lista.removerNoComeco();
         
 		System.out.println(lista.toString());
 
