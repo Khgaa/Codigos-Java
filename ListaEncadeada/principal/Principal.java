@@ -25,6 +25,9 @@ public class Principal {
 		
 		System.out.println(lista.toString());
 		
+		lista.adicionaPosicao(88, "Marcos");
+        
+		System.out.println(lista.toString());
 
 	}
 
