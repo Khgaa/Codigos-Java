@@ -1,5 +1,7 @@
 package br.ifba.edu.lista;
 
+import javax.swing.JOptionPane;
+
 import br.ifba.edu.basica.Celula;
 
 public class Lista {
@@ -34,21 +36,19 @@ public class Lista {
 		
 	}
     
+    public boolean verificarPosicao(int pos) {
+    	
+    	return pos >= 0 && pos < this.totalElementos;
+    }
+    
     public void adicionaPosicao(int pos, Object obj) {
+    	
+    	if(!this.verificarPosicao(pos)) {
+    		JOptionPane.showMessageDialog(null, "Posição inválida");
+    		throw new IllegalArgumentException("A posição digitada é inválida");
+    	}
 	
     	Celula aux = this.cabeca;
-    	
-    	if(pos > this.totalElementos) {
-        	pos = totalElementos;
-        	
-        	for(int cont = 0; cont < pos - 1; cont++) {
-        		aux = aux.getProxima();
-        	}
-        	
-        	Celula nova = new Celula(aux.getProxima(),obj);
-        	aux.setProxima(nova);
-            this.totalElementos++;
-        } else {
     	
     	for(int cont = 0; cont < pos - 1; cont++) {
     		aux = aux.getProxima();
@@ -59,9 +59,6 @@ public class Lista {
         this.totalElementos++;
         
         }
-    }
-    	
-    
     
 	public String toString() {
 		
