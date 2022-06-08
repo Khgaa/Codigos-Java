@@ -39,7 +39,15 @@ public class Lista {
     	Celula aux = this.cabeca;
     	
     	if(pos > this.totalElementos) {
-        	System.out.println("Posição não encontrada");
+        	pos = totalElementos;
+        	
+        	for(int cont = 0; cont < pos - 1; cont++) {
+        		aux = aux.getProxima();
+        	}
+        	
+        	Celula nova = new Celula(aux.getProxima(),obj);
+        	aux.setProxima(nova);
+            this.totalElementos++;
         } else {
     	
     	for(int cont = 0; cont < pos - 1; cont++) {
