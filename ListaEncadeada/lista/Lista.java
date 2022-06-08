@@ -60,6 +60,14 @@ public class Lista {
         
         }
     
+    public void removerNoComeco() {
+    	
+    	Celula aux = this.cabeca;
+    	this.cabeca = this.cabeca.getProxima();
+    	aux.setProxima(null);
+    	this.totalElementos--;
+    }
+    
 	public String toString() {
 		
 		if(this.totalElementos == 0) {
