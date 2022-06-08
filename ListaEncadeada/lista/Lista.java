@@ -21,6 +21,19 @@ public class Lista {
 		this.totalElementos++;
 	}
 	
+    public void adicionaNoFinal(Object obj) {
+		
+		if(this.totalElementos == 0) {
+			this.adicionaNoComeco(obj);
+		} else {
+			Celula nova = new Celula(obj);
+			this.cauda.setProxima(nova);
+			this.cauda = nova;
+			this.totalElementos++;
+		}
+		
+	}
+    
 	public String toString() {
 		
 		if(this.totalElementos == 0) {
@@ -42,5 +55,7 @@ public class Lista {
 		
 		return listaencadeada.toString();
 		}
+	
+	
 
 }
