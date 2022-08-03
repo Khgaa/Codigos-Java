@@ -1,10 +1,10 @@
-package br.ifba.edu.lista;
+package lista;
 
 import javax.swing.JOptionPane;
 import java.util.Scanner;
 
-import br.ifba.edu.basica.Celula;
-import br.ifba.edu.funcionario.Funcionario;
+import celula.Celula;
+import funcionario.Funcionario;
 
 public class ListaSimples {
 	
@@ -58,8 +58,8 @@ public class ListaSimples {
     public void adicionaPosicao(int pos, Object obj) {
     	
     	if(!this.verificarPosicao(pos)) {
-    		JOptionPane.showMessageDialog(null, "Posição inválida");
-    		throw new IllegalArgumentException("A posição digitada é inválida");
+    		JOptionPane.showMessageDialog(null, "PosiÃ§Ã£o invÃ¡lida");
+    		throw new IllegalArgumentException("A posiÃ§Ã£o digitada Ã© invÃ¡lida");
     	}
 	
     	Celula aux = this.cabeca;
@@ -96,8 +96,8 @@ public class ListaSimples {
     public void removerPos(int pos, Object obj) {
     	
     	if(!this.verificarPosicao(pos)) {
-    		JOptionPane.showMessageDialog(null, "Posição inválida");
-    		throw new IllegalArgumentException("A posição digitada é inválida");
+    		JOptionPane.showMessageDialog(null, "PosiÃ§Ã£o invÃ¡lida");
+    		throw new IllegalArgumentException("A posiÃ§Ã£o digitada Ã© invÃ¡lida");
     	}
     	
         Celula aux = this.cabeca;
@@ -113,7 +113,7 @@ public class ListaSimples {
     
     public void quantidade() {
     	
-    	System.out.println("Número de posições: " + this.totalElementos);
+    	System.out.println("NÃºmero de posiÃ§Ãµes: " + this.totalElementos);
     }
     
 	public String toString() {
@@ -140,17 +140,17 @@ public class ListaSimples {
 	
 	public void menu() {
 		
-		System.out.println("O que você deseja fazer?");
+		System.out.println("O que vocÃª deseja fazer?");
 		System.out.println();
-		System.out.println("Digite 0 para adicionar um funcionário no começo");
-		System.out.println("Digite 1 para adicionar um funcionário no final");
-		System.out.println("Digite 2 para adicionar um funcionário em uma posição específica");
-		System.out.println("Digite 3 para remover o funcionário no começo");
-		System.out.println("Digite 4 para remover o funcionário no final");
-		System.out.println("Digite 5 para remover um funcionário de uma posição específica");
+		System.out.println("Digite 0 para adicionar um funcionÃ¡rio no comeÃ§o");
+		System.out.println("Digite 1 para adicionar um funcionÃ¡rio no final");
+		System.out.println("Digite 2 para adicionar um funcionÃ¡rio em uma posiÃ§Ã£o especÃ­fica");
+		System.out.println("Digite 3 para remover o funcionÃ¡rio no comeÃ§o");
+		System.out.println("Digite 4 para remover o funcionÃ¡rio no final");
+		System.out.println("Digite 5 para remover um funcionÃ¡rio de uma posiÃ§Ã£o especÃ­fica");
 		System.out.println("Digite 6 para terminar");
 		System.out.println();
-		System.out.print("Digite um número: ");
+		System.out.print("Digite um nÃºmero: ");
 		int num = in.nextInt();
 		System.out.println("");
 		
@@ -192,8 +192,8 @@ public class ListaSimples {
 		
 		if(num == 2) {
 			
-			System.out.println("Número de posições: " + this.totalElementos);
-			System.out.print("Digite o número da posição que você quer adicionar: ");
+			System.out.println("NÃºmero de posiÃ§Ãµes: " + this.totalElementos);
+			System.out.print("Digite o nÃºmero da posiÃ§Ã£o que vocÃª quer adicionar: ");
 			int pos = in.nextInt();
 			
 			Funcionario f = new Funcionario();
@@ -231,8 +231,8 @@ public class ListaSimples {
 		
 		if(num == 5) {
 			
-			System.out.println("Número de posições: " + this.totalElementos);
-			System.out.print("Digite o número da posição que você quer remover: ");
+			System.out.println("NÃºmero de posiÃ§Ãµes: " + this.totalElementos);
+			System.out.print("Digite o nÃºmero da posiÃ§Ã£o que vocÃª quer remover: ");
 			int pos2 = in.nextInt();
 			
 			removerPos(pos2, pos2);
