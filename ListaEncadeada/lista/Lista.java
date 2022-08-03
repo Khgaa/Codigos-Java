@@ -1,4 +1,4 @@
-package br.ifba.edu.lista;
+package lista;
 
 import javax.swing.JOptionPane;
 
