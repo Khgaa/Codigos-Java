@@ -1,4 +1,4 @@
-package br.ifba.edu.basica;
+package basica;
 
 public class Celula {
 	
