@@ -1,9 +1,9 @@
-package br.ifba.edu.principal;
+package principal;
 
 import javax.swing.JOptionPane;
 
-import br.ifba.edu.funcionario.Funcionario;
-import br.ifba.edu.lista.ListaSimples;
+import funcionario.Funcionario;
+import lista.ListaSimples;
 import java.util.Scanner;
 
 public class Principal {
