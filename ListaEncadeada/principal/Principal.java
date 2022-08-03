@@ -1,6 +1,6 @@
-package br.ifba.edu.principal;
+package principal;
 
-import br.ifba.edu.lista.Lista;
+import lista.Lista;
 
 public class Principal {
 
