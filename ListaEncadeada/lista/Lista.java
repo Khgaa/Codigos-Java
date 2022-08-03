@@ -2,7 +2,7 @@ package lista;
 
 import javax.swing.JOptionPane;
 
-import br.ifba.edu.basica.Celula;
+import basica.Celula;
 
 public class Lista {
 	
