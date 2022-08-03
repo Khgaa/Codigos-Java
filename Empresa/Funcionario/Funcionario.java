@@ -1,4 +1,4 @@
-package br.ifba.edu.funcionario;
+package funcionario;
 
 public class Funcionario {
 	
