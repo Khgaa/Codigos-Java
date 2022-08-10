@@ -1,8 +1,8 @@
-package br.edu.ifba.linked;
+package linked;
 
 import java.util.LinkedList;
 import java.util.Scanner;
-import br.edu.ifba.basica.Contato;
+import basica.Contato;
 
 
 public class Ligada {
@@ -36,7 +36,7 @@ public class Ligada {
 	public void adicionarPorPosicao(int pos, Contato c) {
 		
 		if(!this.verificaPosicao(pos)) {
-			System.out.println("Posição inválida");
+			System.out.println("PosiÃ§Ã£o invÃ¡lida");
 		}else if(lista.isEmpty()) {
 			this.adicionarNoInicio(c);
 		}else {
@@ -49,7 +49,7 @@ public class Ligada {
 	public void removerNoInicio() {
 		
 		if(lista.isEmpty()) {
-			System.out.println("A lista está vazia");
+			System.out.println("A lista estÃ¡ vazia");
 		}else {
 			lista.removeFirst();
 			this.totalQuantidade--;
@@ -60,7 +60,7 @@ public class Ligada {
 	public void removerNoFinal() {
 		
 		if(lista.isEmpty()) {
-			System.out.println("A lista está vazia");
+			System.out.println("A lista estÃ¡ vazia");
 		}else {
 		    lista.removeLast();
 		    this.totalQuantidade--;
@@ -70,9 +70,9 @@ public class Ligada {
 	public void removerPorPosicao(int pos) {
 		
 		if(!this.verificaPosicao(pos)) {
-			System.out.println("Posição inválida");
+			System.out.println("PosiÃ§Ã£o invÃ¡lida");
 		} else if(lista.isEmpty()) {
-			System.out.println("A lista está vazia");
+			System.out.println("A lista estÃ¡ vazia");
 		}else {
 			lista.remove(pos);
 			this.totalQuantidade--;
@@ -82,7 +82,7 @@ public class Ligada {
 	
 	public void imprimir() {
 		
-		System.out.println("A quantidade de posições é de: " + lista.toString());
+		System.out.println("A quantidade de posiÃ§Ãµes Ã© de: " + lista.toString());
 	}
 	
 	public void quantidade() {
@@ -92,17 +92,17 @@ public class Ligada {
 	
 public void menu() {
 		
-		System.out.println("O que você deseja fazer?");
+		System.out.println("O que vocÃª deseja fazer?");
 		System.out.println();
-		System.out.println("Digite 0 para adicionar um contato no começo");
+		System.out.println("Digite 0 para adicionar um contato no comeÃ§o");
 		System.out.println("Digite 1 para adicionar um contato no final");
-		System.out.println("Digite 2 para adicionar um contato em uma posição específica");
-		System.out.println("Digite 3 para remover o contato no começo");
+		System.out.println("Digite 2 para adicionar um contato em uma posiÃ§Ã£o especÃ­fica");
+		System.out.println("Digite 3 para remover o contato no comeÃ§o");
 		System.out.println("Digite 4 para remover o contato no final");
-		System.out.println("Digite 5 para remover um contato de uma posição específica");
+		System.out.println("Digite 5 para remover um contato de uma posiÃ§Ã£o especÃ­fica");
 		System.out.println("Digite 6 para terminar");
 		System.out.println();
-		System.out.print("Digite um número: ");
+		System.out.print("Digite um nÃºmero: ");
 		int num = in.nextInt();
 		System.out.println("");
 		
@@ -111,7 +111,7 @@ public void menu() {
 			Contato c = new Contato();
 			System.out.print("Digite o nome do contato: ");
 			c.setNome(in.next());
-			System.out.print("Digite o número do contato: ");
+			System.out.print("Digite o nÃºmero do contato: ");
 			c.setFone(in.next());
 			System.out.println();
 			adicionarNoInicio(c);
@@ -127,7 +127,7 @@ public void menu() {
 			Contato c = new Contato();
 			System.out.print("Digite o nome do contato: ");
 			c.setNome(in.next());
-			System.out.print("Digite o número do contato: ");
+			System.out.print("Digite o nÃºmero do contato: ");
 			c.setFone(in.next());
 			System.out.println();
 			adicionarNoFinal(c);
@@ -140,14 +140,14 @@ public void menu() {
 		
 		if(num == 2) {
 			
-			System.out.println("Número de posições: " + this.totalQuantidade);
-			System.out.print("Digite o número da posição que você quer adicionar: ");
+			System.out.println("NÃºmero de posiÃ§Ãµes: " + this.totalQuantidade);
+			System.out.print("Digite o nÃºmero da posiÃ§Ã£o que vocÃª quer adicionar: ");
 			int pos = in.nextInt();
 			
 			Contato c = new Contato();
 			System.out.print("Digite o nome do contato: ");
 			c.setNome(in.next());
-			System.out.print("Digite o número do contato: ");
+			System.out.print("Digite o nÃºmero do contato: ");
 			c.setFone(in.next());
 			System.out.println();
 			adicionarPorPosicao(pos, c);
@@ -177,8 +177,8 @@ public void menu() {
 		
 		if(num == 5) {
 			
-			System.out.println("Número de posições: " + this.totalQuantidade);
-			System.out.print("Digite o número da posição que você quer remover: ");
+			System.out.println("NÃºmero de posiÃ§Ãµes: " + this.totalQuantidade);
+			System.out.print("Digite o nÃºmero da posiÃ§Ã£o que vocÃª quer remover: ");
 			int pos2 = in.nextInt();
 			
 			removerPorPosicao(pos2);
