@@ -1,9 +1,9 @@
-package br.edu.ifba.principal;
+package principal;
 
 import java.util.Scanner;
 
-import br.edu.ifba.basica.Contato;
-import br.edu.ifba.linked.Ligada;
+import basica.Contato;
+import linked.Ligada;
 
 public class Principal {
 
@@ -17,7 +17,7 @@ public class Principal {
 			Contato c = new Contato();
 			System.out.print("Digite o nome do contato: ");
 			c.setNome(in.next());
-			System.out.print("Digite o número do contato: ");
+			System.out.print("Digite o nÃºmero do contato: ");
 			c.setFone(in.next());
 			System.out.println();
 			lista.adicionarNoInicio(c);
