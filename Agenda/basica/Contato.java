@@ -1,4 +1,4 @@
-package br.edu.ifba.basica;
+package basica;
 
 public class Contato {
 	
